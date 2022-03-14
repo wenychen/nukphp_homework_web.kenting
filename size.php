@@ -32,7 +32,7 @@
 
 											<table style="border: 1px solid #00; border-collapse: collapse;border:8px #FFD382 groove;">
 												<tr>
-            										<th colspan ="5" style="text-align: center;">男板短袖上衣<br/><p style="text-align: right;">【單位/英吋】</p><br/><img src="images/pic06.jpg" alt="" /></th>
+            										<th colspan ="5" style="text-align: center;">男版短袖上衣<br/><p style="text-align: right;">【單位/英吋】</p><br/><img src="images/pic06.jpg" alt="" /></th>
             									</tr>
             									<tr>
             									<tr>
@@ -99,7 +99,7 @@
 							<div class="col-5 col-8-medium col-12-small">					
 											<table style="border: 1px solid #00; border-collapse: collapse;border:8px #FFD382 groove;">
 												<tr>
-            										<th colspan ="5" style="text-align: center;">女板短袖上衣<br/><p style="text-align: right;">【單位/英吋】</p><br/><img src="images/pic07.jpg" alt="" /></th>
+            										<th colspan ="5" style="text-align: center;">女版短袖上衣<br/><p style="text-align: right;">【單位/英吋】</p><br/><img src="images/pic07.jpg" alt="" /></th>
             									</tr>
             									<tr>
             									<tr>
