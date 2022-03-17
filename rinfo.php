@@ -29,12 +29,11 @@
 				<section id="features">
 					<div class="container">
 						<div class="row aln-center">
-							<div class="col-4 col-6-medium col-12-small">
+							<div class="col-6 col-8-medium col-12-small">
 
 								<!-- Feature -->
-									<section>
 										<header>
-										<p><b style="text-align: center;color: #02C874">報名資料</b>						
+										<p><b style="text-align: center;color: #02C874;"><h2>報名資料</h2></b>						
 									</header>
 										<?php
 											$uname = $_POST['uname'];
@@ -42,31 +41,120 @@
 											$uemail = $_POST['uemail'];
 											$ubir = $_POST['ubir'];
 											$uid = $_POST['uid'];
+											$usex = $_POST['usex'];
+											$food = $_POST['food'];
+											//$foods=implode(",",$food);
+											$foodsize = count($food);
+											$utrip = $_POST['utrip'];
+											$usize = $_POST['usize'];
+											$unumber = $_POST['unumber'];
+											$comment = $_POST['comment'];
+											$comment = strip_tags($comment);
+											$comment = nl2br($comment);
 										?>
 
-										<table>
+										<table style="border: 1px solid #00; border-collapse: collapse;border:8px #FFD382 groove; width: 100%;">
 											<tr>
-												<td style="text-align: left;"><?php echo '姓名:'.$uname; ?></td>
+												<td style="text-align: left;">姓名:</td>
+												<td style="text-align: left;"><?php echo $uname; ?></td>
 											</tr>
 											<tr>
-												<td style="text-align: left;"><?php echo '電話:'.$utel; ?></td>
+												<td style="text-align: left;">電話:</td>
+												<td  style="text-align: left;"><?php echo $utel; ?></td>
 											</tr>
 											<tr>
-												<td style="text-align: left;"><?php echo 'E-mail:'.$uemail; ?></td>
+												<td style="text-align: left;">E-mail:</td>
+												<td style="text-align: left;"><?php echo $uemail; ?></td>
 											</tr>
 											<tr>
-												<td style="text-align: left;"><?php echo '生日:'.$ubir; ?></td>
+												<td style="text-align: left;">生日:</td>
+												<td style="text-align: left;"><?php echo $ubir; ?></td>
 											</tr>
 											<tr>
-												<td style="text-align: left;"><?php echo '身份證字號:'.$uid; ?></td>
+												<td style="text-align: left;">身份證字號:</td>
+												<td style="text-align: left;"><?php echo $uid; ?></td>
 											</tr>
-
+											<tr>
+												<td style="text-align: left;">性別:</td>
+										 		<td style="text-align: left;">
+													<?php 
+													if ($usex=='1') {
+											 		echo '男';} 
+											 		elseif ($usex=='2') {
+											 		echo '女';}
+											 		if ($usex=='3') {
+											 		echo '不明';}
+											 		?>
+										 		</td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">飲食:</td>
+												<td style="text-align: left;">
+													<?php 
+													//echo '飲食:'.$foods;
+													for ($i=0; $i <$foodsize ; $i++){ 
+														if ($i==0) {
+															echo $food[$i];
+														}else {
+															echo ','.$food[$i];
+														}
+													}
+													?>
+												</td>
+											</tr>
+											<tr style="text-align: left;">
+												<td>參加行程	</td>
+												<td>
+													<?php
+													echo $utrip; 
+													?>
+												</td>
+											</tr>
+											<tr style="text-align: left;">
+												<td>T-shirt尺寸:</td>
+												<td>
+													<?php
+													echo $usize; 
+													?>
+												</td>
+											</tr>
+											<tr style="text-align: left;">
+												<td>參加人數:</td>
+												<td>
+													<?php
+													echo $usize; 
+													?>
+												</td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">建議:</td>
+												<td style="text-align: left;">								<?php 
+													echo $comment;
+													?>
+												</td>
+											</tr>
+											<tr>
+												<td style="text-align: left;">身分證正面照片:</td>
+												<td style="text-align: left;">
+													<?php 
+													echo $_FILES['uphoto']['name'].'</br>';
+													echo $_FILES['uphoto']['tmp_name'].'</br>';
+													echo $_FILES['uphoto']['size'].'</br>';
+													echo $_FILES['uphoto']['type'].'</br>';
+													if(copy($_FILES['uphoto']['tmp_name'],$_FILES['uphoto']['name'])){
+														echo 'success';
+													}else{
+													echo 'failed';
+													}
+													?>
+												</td>
+											</tr>
 										</table>
 									</section>
 							</div>
 						</div>
 					</div>
-				</section>
+
 
 			<!-- Footer -->
 			<?php require_once("all_footer.php"); ?>
