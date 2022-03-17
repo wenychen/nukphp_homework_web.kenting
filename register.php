@@ -28,7 +28,7 @@
 					<div class="container">						
 						<div class="row aln-center">
 								<!-- Feature -->
-									<form action="rinfo.php" method="post" style="width: 80%;">
+									<form action="rinfo.php" method="post" style="width: 80%;" enctype="multipart/form-data">
 											<table>
 												<tr>
 													<td>姓名</td>
@@ -57,35 +57,35 @@
 												<tr>
 													<td>飲食</td>
 													<td align="left">
-														<label><input type="checkbox" name="food" value="1" ><span>素食</span></label>
-														<label><input type="checkbox" name="food" value="2"><span>葷食</span></label>
-														<label><input type="checkbox" name="food" value="3"><span>穆斯林</span></label>
-														<label><input type="checkbox" name="food" value="4"><span>生菜</span></label>
-														<label><input type="checkbox" name="food" value="5"><span>海鮮</span></label>								
+														<label><input type="checkbox" name="food[]" value="素食" ><span>素食</span></label>
+														<label><input type="checkbox" name="food[]" value="葷食"><span>葷食</span></label>
+														<label><input type="checkbox" name="food[]" value="穆斯林"><span>穆斯林</span></label>
+														<label><input type="checkbox" name="food[]" value="生菜"><span>生菜</span></label>
+														<label><input type="checkbox" name="food[]" value="海鮮"><span>海鮮</span></label>								
 													</td>
 												</tr>
 												<tr>
 													<td>參加行程</td>
 													<td>
-														<select name="size" style="width: 100%; height: 100%" >
-															<option value="0">請選擇</option>
-															<option value="1">行程A&nbsp&nbsp&nbsp特價：6,999元</b>&nbsp&nbsp&nbsp<s>&nbsp<b>原價：8,999元</option>
-    														<option value="2">行程B&nbsp&nbsp&nbsp特價：4,999元</b>&nbsp&nbsp&nbsp<s>&nbsp<b>原價：6,999元</option>    														
+														<select name="utrip" style="width: 100%; height: 100%" >
+															<option value="未選擇">請選擇</option>
+															<option value="行程A">行程A&nbsp&nbsp&nbsp特價：6,999元</b>&nbsp&nbsp&nbsp<s>&nbsp<b>原價：8,999元</option>
+    														<option value="行程B">行程B&nbsp&nbsp&nbsp特價：4,999元</b>&nbsp&nbsp&nbsp<s>&nbsp<b>原價：6,999元</option> 
 														</select>
 													</td>
 												</tr>
 												<tr>
 													<td>T-shirt尺寸</td>
 													<td>
-														<select name="size" style="width: 100%; height: 100%" >
-															<option value="0">請選擇</option>
-															<option value="1">S</option>
-    														<option value="2">M</option>
-    														<option value="3">L</option>
-    														<option value="4">XL</option>
-    														<option value="5">2L</option>
-    														<option value="6">3L</option>
-    														<option value="7">5L</option>
+														<select name="usize" style="width: 100%; height: 100%" >
+															<option value="未選擇">請選擇</option>
+															<option value="S">S</option>
+    														<option value="M">M</option>
+    														<option value="L">L</option>
+    														<option value="XL">XL</option>
+    														<option value="2L">2L</option>
+    														<option value="3L">3L</option>
+    														<option value="5L">5L</option>
 														</select>
 													</td>
 												</tr>
@@ -94,8 +94,14 @@
 													<td><input type="number" name="unumber" required="required"></td>
 												</tr>
 												<tr>
-													<td></td>
-													<td></td>
+													<td>建議</td>
+													<td><textarea style="width: 100%" name="comment">
+													</textarea>
+													</td>
+												</tr>
+												<tr>
+													<td>生活照</td>
+													<td><input type="file" name="uphoto" required="required" accept=".jpg,.png"/></td>
 												</tr>
 											</table>
 
