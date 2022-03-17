@@ -134,7 +134,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td style="text-align: left;">身分證正面照片:</td>
+												<td style="text-align: left;">生活照:</td>
 												<td style="text-align: left;">
 													<?php 
 													echo $_FILES['uphoto']['name'].'</br>';
