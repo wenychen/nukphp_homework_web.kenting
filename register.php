@@ -8,9 +8,10 @@
 		<meta name="description" content="NUKIM_php_homework">
     	<meta name="author" content="weny">
     	<link rel="icon" href="/img/logo.jpg" type="image/x-icon"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
-	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -101,7 +102,12 @@
 												</tr>
 												<tr>
 													<td>生活照</td>
-													<td><input type="file" name="uphoto" required="required" accept=".jpg,.png"/></td>
+													<td>
+														<label class="btn btn-primary" style="width: 100%">
+																<input id="upload_img" style="display:none;" type="file">
+																<i class="fa fa-picture-o"></i> 上傳圖片
+														</label>
+													</td>
 												</tr>
 											</table>
 
