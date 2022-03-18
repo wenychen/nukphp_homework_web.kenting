@@ -104,7 +104,7 @@
 													<td>生活照</td>
 													<td>
 														<label class="btn btn-primary" style="width: 100%">
-																<input id="upload_img" style="display:none;" type="file">
+																<input id="uphoto" name="uphoto" style="display:none;" type="file">
 																<i class="fa fa-picture-o"></i> 上傳圖片
 														</label>
 													</td>
