@@ -95,7 +95,7 @@
 												</tr>
 												<tr>
 													<td>建議</td>
-													<td><textarea style="width: 100%" name="comment">
+													<td><textarea style="width: 100%; resize:none;" name="comment">
 													</textarea>
 													</td>
 												</tr>
