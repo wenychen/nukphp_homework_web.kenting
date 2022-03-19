@@ -101,12 +101,32 @@
 													</td>
 												</tr>
 												<tr>
-													<td>生活照</td>
+													<td rowspan="2">生活照</td>
 													<td>
 														<label class="btn btn-primary" style="width: 100%">
-																<input id="uphoto" name="uphoto" style="display:none;" type="file">
+																<input name="uphoto" style="display:none;" type="file" onchange="selectImgFile(this.files)" />
 																<i class="fa fa-picture-o"></i> 上傳圖片
 														</label>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<img id="showImg"></img>		
+														<script>
+															function selectImgFile(files) {
+														    if (!files.length) {
+														        return false;
+														    }
+														    
+														    let file   = files[0];
+														    let reader = new FileReader();
+														    reader.onload = function () {
+														        document.getElementById('showImg').src = this.result;
+														    };
+
+														    reader.readAsDataURL(file);
+															}
+														</script>
 													</td>
 												</tr>
 											</table>
