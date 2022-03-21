@@ -78,12 +78,12 @@
 												<td style="text-align: left;">性別:</td>
 										 		<td style="text-align: left;">
 													<?php 
-													if ($usex=='1') {
-											 		echo '男';} 
-											 		elseif ($usex=='2') {
-											 		echo '女';}
-											 		if ($usex=='3') {
-											 		echo '不明';}
+														if ($usex=='1') {
+											 			echo '男';} 
+											 			elseif ($usex=='2') {
+											 			echo '女';}
+											 			if ($usex=='3') {
+											 			echo '不方便透露';}	
 											 		?>
 										 		</td>
 											</tr>
