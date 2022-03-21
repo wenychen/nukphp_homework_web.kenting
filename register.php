@@ -53,13 +53,13 @@
 												</tr>
 												<tr>
 													<td>性別</td>
-													<td align="left"><input type="radio" name="usex" value="1">男<input type="radio" name="usex" value="2">女</td>
+													<td align="left"><input type="radio" name="usex" value="1" required="required">男<input type="radio" name="usex" value="2">女<input type="radio" name="usex" value="3">不方便透露</td>
 												</tr>
 												<tr>
 													<td>飲食</td>
 													<td align="left">
-														<label><input type="checkbox" name="food[]" value="素食" ><span>素食</span></label>
-														<label><input type="checkbox" name="food[]" value="葷食"><span>葷食</span></label>
+														<label><input type="checkbox" name="food[]" value="素食"><span>素食</span></label>
+														<label><input type="checkbox" name="food[]" value="葷食" checked ><span>葷食</span></label>
 														<label><input type="checkbox" name="food[]" value="穆斯林"><span>穆斯林</span></label>
 														<label><input type="checkbox" name="food[]" value="生菜"><span>生菜</span></label>
 														<label><input type="checkbox" name="food[]" value="海鮮"><span>海鮮</span></label>								
@@ -120,17 +120,17 @@
 
 														        var fileData = e.target.files[0]; // 檔案資訊
 														        var fileName = fileData.name; // 檔案名稱
-														        var fileType = fileData.type; // 檔案類型
-														        var fileSize = Math.floor(fileData.size * 0.001); // 檔案大小轉成kb
-														        var fileTime = fileData.lastModifiedDate;
+														        // var fileType = fileData.type; // 檔案類型
+														        // var fileSize = Math.floor(fileData.size * 0.001); // 檔案大小轉成kb
+														        // var fileTime = fileData.lastModifiedDate;
 
-														        console.log(fileData); // 用開發人員工具可看到資料
+														        // console.log(fileData); // 用開發人員工具可看到資料
 
 														        document.getElementById('file_name').innerText = fileName;
-														        document.getElementById('file_type').innerText = fileType;
-														        document.getElementById('file_size').innerText = fileSize + 'kb';
-														        document.getElementById('file_time').innerText = fileTime;
-														        document.getElementById('file_thumbnail').src = URL.createObjectURL(fileData);
+														        // document.getElementById('file_type').innerText = fileType;
+														        // document.getElementById('file_size').innerText = fileSize + 'kb';
+														        // document.getElementById('file_time').innerText = fileTime;
+														        // document.getElementById('file_thumbnail').src = URL.createObjectURL(fileData);
 
 														      }, false);
 
